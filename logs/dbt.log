@@ -1,0 +1,75 @@
+[0m14:30:11.103562 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000154FE9E46D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000154FFBC5FA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000154FFBC5D90>]}
+
+
+============================== 14:30:11.107343 | 1004db96-315a-4f56-87d4-42c162b521a6 ==============================
+[0m14:30:11.107343 [info ] [MainThread]: Running with dbt=1.10.20
+[0m14:30:11.108499 [debug] [MainThread]: running dbt with arguments {'debug': 'False', 'fail_fast': 'False', 'log_cache_events': 'False', 'send_anonymous_usage_stats': 'True', 'cache_selected_only': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'invocation_command': 'dbt init ecommerce_dbt', 'version_check': 'True', 'empty': 'None', 'printer_width': '80', 'partial_parse': 'True', 'log_path': 'logs', 'quiet': 'False', 'warn_error': 'None', 'write_json': 'True', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'profiles_dir': 'C:\\Users\\User\\.dbt', 'use_experimental_parser': 'False', 'use_colors': 'True', 'indirect_selection': 'eager'}
+[0m14:30:11.133415 [debug] [MainThread]: Starter project path: C:\Users\User\anaconda3\lib\site-packages\dbt\include\starter_project
+[0m14:30:11.170335 [info ] [MainThread]: 
+Your new dbt project "ecommerce_dbt" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m14:30:11.171381 [info ] [MainThread]: Setting up your profile.
+[0m14:30:45.123309 [error] [MainThread]: Encountered an error:
+
+[0m14:30:45.149632 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\User\anaconda3\lib\site-packages\dbt\cli\requires.py", line 178, in wrapper
+    result, success = func(*args, **kwargs)
+  File "C:\Users\User\anaconda3\lib\site-packages\dbt\cli\requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\User\anaconda3\lib\site-packages\dbt\cli\main.py", line 483, in init
+    results = task.run()
+  File "C:\Users\User\anaconda3\lib\site-packages\dbt\task\init.py", line 346, in run
+    self.setup_profile(profile_name)
+  File "C:\Users\User\anaconda3\lib\site-packages\dbt\task\init.py", line 261, in setup_profile
+    adapter = self.ask_for_adapter_choice()
+  File "C:\Users\User\anaconda3\lib\site-packages\dbt\task\init.py", line 242, in ask_for_adapter_choice
+    numeric_choice = click.prompt(prompt_msg, type=click.INT)
+  File "C:\Users\User\anaconda3\lib\site-packages\click\termui.py", line 166, in prompt
+    value = prompt_func(prompt)
+  File "C:\Users\User\anaconda3\lib\site-packages\click\termui.py", line 149, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m14:30:45.153561 [debug] [MainThread]: Command `dbt init` failed at 14:30:45.153561 after 34.17 seconds
+[0m14:30:45.155487 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000154FE9E46D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000154FFC3BAF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000154FFC3BCD0>]}
+[0m14:30:45.155487 [debug] [MainThread]: Flushing usage events
+[0m14:30:45.560130 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:31:57.028941 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027124C64700>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027125E35EB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027125E35CA0>]}
+
+
+============================== 14:31:57.033544 | b2c96eb5-948e-4fa8-9308-8359f0d4c434 ==============================
+[0m14:31:57.033544 [info ] [MainThread]: Running with dbt=1.10.20
+[0m14:31:57.034543 [debug] [MainThread]: running dbt with arguments {'debug': 'False', 'fail_fast': 'False', 'log_cache_events': 'False', 'send_anonymous_usage_stats': 'True', 'cache_selected_only': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'no_print': 'None', 'version_check': 'True', 'empty': 'None', 'printer_width': '80', 'partial_parse': 'True', 'log_path': 'logs', 'quiet': 'False', 'warn_error': 'None', 'write_json': 'True', 'introspect': 'True', 'log_format': 'default', 'invocation_command': 'dbt init ecommerce_dbt', 'static_parser': 'True', 'profiles_dir': 'C:\\Users\\User\\.dbt', 'use_experimental_parser': 'False', 'use_colors': 'True', 'indirect_selection': 'eager'}
+[0m14:31:57.053997 [info ] [MainThread]: A project called ecommerce_dbt already exists here.
+[0m14:31:57.056564 [debug] [MainThread]: Command `dbt init` succeeded at 14:31:57.056564 after 0.15 seconds
+[0m14:31:57.057565 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027124C64700>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027125E0F940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027125E0FC70>]}
+[0m14:31:57.058565 [debug] [MainThread]: Flushing usage events
+[0m14:31:57.456780 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:50:47.209874 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001433F4B58B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000143406993A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014340699190>]}
+
+
+============================== 20:50:47.215406 | dd79808b-ff64-48f8-9dcc-2bb350dd5c65 ==============================
+[0m20:50:47.215406 [info ] [MainThread]: Running with dbt=1.10.20
+[0m20:50:47.216696 [debug] [MainThread]: running dbt with arguments {'debug': 'False', 'fail_fast': 'False', 'log_cache_events': 'False', 'send_anonymous_usage_stats': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'cache_selected_only': 'False', 'invocation_command': 'dbt run', 'log_format': 'default', 'version_check': 'True', 'empty': 'False', 'printer_width': '80', 'partial_parse': 'True', 'log_path': 'logs', 'introspect': 'True', 'warn_error': 'None', 'write_json': 'True', 'quiet': 'False', 'no_print': 'None', 'target_path': 'None', 'static_parser': 'True', 'profiles_dir': 'C:\\Users\\User\\.dbt', 'use_experimental_parser': 'False', 'use_colors': 'True', 'indirect_selection': 'eager'}
+[0m20:50:47.216696 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path D:\Ecommerce_pipeline_Project\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m20:50:47.219535 [debug] [MainThread]: Command `dbt run` failed at 20:50:47.219535 after 0.13 seconds
+[0m20:50:47.220040 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001433F4B58B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014340699220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014340699EB0>]}
+[0m20:50:47.221042 [debug] [MainThread]: Flushing usage events
+[0m20:50:47.648792 [debug] [MainThread]: An error was encountered while trying to flush usage events
