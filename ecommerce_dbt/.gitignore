@@ -1,0 +1,23 @@
+# credentials
+rootkey.csv
+.env
+
+# logs
+logs/
+
+# dbt
+ecommerce_dbt/target/
+ecommerce_dbt/logs/
+ecommerce_dbt/.user.yml
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# dagster
+dagster_pipeline/.tmp_dagster_home*/
+
+# snowflake
+*.pem

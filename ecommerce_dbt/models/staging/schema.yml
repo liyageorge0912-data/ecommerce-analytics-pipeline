@@ -1,0 +1,56 @@
+version: 2
+
+models:
+  - name: stg_users
+    description: "Cleaned and flattened user data from DummyJSON API"
+    columns:
+      - name: user_id
+        description: "Unique identifier for each user"
+        tests:
+          - unique
+          - not_null
+      - name: first_name
+        description: "User first name"
+        tests:
+          - not_null
+      - name: email
+        description: "User email address"
+        tests:
+          - unique
+          - not_null
+      - name: gender
+        description: "User gender"
+        tests:
+          - accepted_values:
+              values: ['male', 'female']
+      - name: role
+        description: "User role in the system"
+        tests:
+          - accepted_values:
+              values: ['admin', 'moderator', 'user']
+
+  - name: stg_carts
+    description: "Cleaned and flattened cart data from DummyJSON API"
+    columns:
+      - name: cart_id
+        description: "Unique identifier for each cart"
+        tests:
+          - unique
+          - not_null
+      - name: user_id
+        description: "Links cart to a user"
+        tests:
+          - not_null
+      - name: cart_total
+        description: "Total value of the cart"
+        tests:
+          - not_null
+
+  - name: stg_products
+    description: "Cleaned and flattened product data from DummyJSON API"
+    columns:
+      - name: product_id
+        description: "Unique identifier for each product"
+        tests:
+          - unique
+          - not_null

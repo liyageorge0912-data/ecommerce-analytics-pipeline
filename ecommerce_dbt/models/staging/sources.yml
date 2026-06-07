@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: ecommerce
+    database: ecommerce_pipeline
+    schema: raw
+    tables:
+      - name: raw_users
+      - name: raw_carts
+      - name: raw_products
