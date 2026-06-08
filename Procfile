@@ -1,1 +1,1 @@
-web: dagster-webserver -f dagster_pipeline/definitions.py -h 0.0.0.0 -p $PORT
+web: dagster-webserver -f dagster_pipeline/definitions.py -d dagster_pipeline -h 0.0.0.0 -p $PORT
