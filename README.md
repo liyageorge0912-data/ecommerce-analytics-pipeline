@@ -21,18 +21,18 @@ An end-to-end analytics engineering pipeline built to answer key ecommerce busin
 ## Data Models
 
 ### Staging
-- `stg_users` — cleaned customer profiles
-- `stg_carts` — cleaned cart data
-- `stg_cart_items` — one row per product per cart
-- `stg_products` — cleaned product catalogue
+- `stg_users` : cleaned customer profiles
+- `stg_carts` : cleaned cart data
+- `stg_cart_items` : one row per product per cart
+- `stg_products`: cleaned product catalogue
 
 ### Intermediate
 - `int_user_carts` — users joined with their carts
 
 ### Marts
-- `mart_customer_ltv` — customer lifetime value by segment
-- `mart_product_revenue` — revenue by product
-- `mart_category_basket` — basket analysis by category
+- `mart_customer_ltv` : customer lifetime value by segment
+- `mart_product_revenue` : revenue by product
+- `mart_category_basket` : basket analysis by category
 
 ## Data Quality
 13 dbt tests covering:
