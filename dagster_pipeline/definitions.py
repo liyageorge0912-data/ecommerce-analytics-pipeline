@@ -7,7 +7,7 @@ sys.path.insert(0, os.path.dirname(__file__))
 from assets import ingest_users, ingest_carts, ingest_products
 
 # hardcoded path to dbt project
-DBT_PROJECT_DIR = Path(r"D:\Ecommerce_pipeline_Project\ecommerce_dbt")
+DBT_PROJECT_DIR = Path(__file__).parent.parent / "ecommerce_dbt"
 
 # dbt resource
 dbt_resource = DbtCliResource(project_dir=str(DBT_PROJECT_DIR))
