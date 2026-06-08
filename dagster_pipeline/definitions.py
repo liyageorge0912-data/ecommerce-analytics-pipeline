@@ -1,4 +1,4 @@
-from dagster import Definitions, ScheduleDefinition, define_asset_job
+from dagster_dbt import DbtCliResource, dbt_assets, DagsterDbtTranslator
 from dagster_dbt import DbtCliResource, dbt_assets
 from pathlib import Path
 import sys
@@ -13,7 +13,10 @@ DBT_PROJECT_DIR = Path(__file__).parent.parent / "ecommerce_dbt"
 dbt_resource = DbtCliResource(project_dir=str(DBT_PROJECT_DIR))
 
 # dbt assets
-@dbt_assets(manifest=DBT_PROJECT_DIR / "target" / "manifest.json")
+@dbt_assets(
+    manifest=DBT_PROJECT_DIR / "target" / "manifest.json",
+    dagster_dbt_translator=DagsterDbtTranslator()
+)
 def ecommerce_dbt_assets(context, dbt: DbtCliResource):
     yield from dbt.cli(
         ["run", "--profiles-dir", str(Path.home() / ".dbt")],
