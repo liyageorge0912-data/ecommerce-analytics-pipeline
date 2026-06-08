@@ -1,0 +1,7 @@
+dagster
+dagster-webserver
+dagster-dbt
+dagster-aws
+dbt-snowflake
+requests
+boto3
