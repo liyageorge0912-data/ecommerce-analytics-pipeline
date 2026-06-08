@@ -1,6 +1,9 @@
 from dagster import Definitions, ScheduleDefinition, define_asset_job
 from dagster_dbt import DbtCliResource, dbt_assets
 from pathlib import Path
+import sys
+import os
+sys.path.insert(0, os.path.dirname(__file__))
 from assets import ingest_users, ingest_carts, ingest_products
 
 # hardcoded path to dbt project
