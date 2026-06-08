@@ -1,12 +1,13 @@
-from dagster import Definitions, ScheduleDefinition, define_asset_job, asset
-from dagster_dbt import DbtCliResource, dbt_assets
-from pathlib import Path
 import sys
 import os
 sys.path.insert(0, os.path.dirname(__file__))
+
+from dagster import Definitions, ScheduleDefinition, define_asset_job, asset
+from dagster_dbt import DbtCliResource, dbt_assets, DagsterDbtTranslator
+from pathlib import Path
 from assets import ingest_users, ingest_carts, ingest_products
 
-# hardcoded path to dbt project
+# path to dbt project
 DBT_PROJECT_DIR = Path(__file__).parent.parent / "ecommerce_dbt"
 
 # dbt resource
