@@ -27,7 +27,7 @@ An end-to-end analytics engineering pipeline built to answer key ecommerce busin
 - `stg_products`: cleaned product catalogue
 
 ### Intermediate
-- `int_user_carts` — users joined with their carts
+- `int_user_carts` : users joined with their carts
 
 ### Marts
 - `mart_customer_ltv` : customer lifetime value by segment
