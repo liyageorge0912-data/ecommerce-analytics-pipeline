@@ -1,4 +1,4 @@
-from dagster_dbt import DbtCliResource, dbt_assets, DagsterDbtTranslator
+from dagster import Definitions, ScheduleDefinition, define_asset_job, asset
 from dagster_dbt import DbtCliResource, dbt_assets
 from pathlib import Path
 import sys
